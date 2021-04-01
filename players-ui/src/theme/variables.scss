@@ -1,0 +1,29 @@
+:root {
+  --brand-green: #e0fa52;
+  --brand-blue: #2a45f0;
+  --brand-magenta: #eb367f;
+  --brand-orange: #e3642c;
+  --system-green: #1dbb79;
+  
+  --white: #fff;
+  --gray-0: #f5f5fa;
+  --gray-1: #e1e0e7;
+  --gray-2: #c4c2d0;
+  --gray-3: #a19db3;
+  --gray-4: #6d6a7f;
+  --gray-5: #403e4a;
+  --gray-6: #2b2b2b;
+  --black-0: #1a1a1a;
+  --black: #000;
+  
+  --primary-background-color: var(--black);
+  --accent-color: var(--brand-green);
+  --elevated-background-color: var(--black-0);
+  --divider-color: var(--gray-6);
+  --border-btn-color: var(--gray-0);
+  --secondary-text-color: var(--white);
+
+  --active-element-highlight-shadow-filter: drop-shadow(0 0.3125em 0.9375em rgba(0,0,0,0.08));
+  --header-z-index: 100;
+  --rounded-corner: 0.125rem;
+}

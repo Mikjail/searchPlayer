@@ -5,7 +5,7 @@
 ```console
 ├───app
 |  |───@containers
-|  |  |───home
+|  |  |───search-engine
 |  |  └───not-found
 |  └──@components
 |     |───search-panel

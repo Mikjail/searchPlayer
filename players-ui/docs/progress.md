@@ -6,16 +6,15 @@
 
 ## Containers
 
-- [ ] Home.
-- [ ] Not-found.
+- [ ] search-engine.
 
 ## Components
 
 - [ ] search-panel.
-- [ ] table.
+- [ ] list.
 - [ ] detail-panel.
 
 ## Theme
 
-- [ ] variables
-- [ ] main
+- [x] variables
+- [x] main
