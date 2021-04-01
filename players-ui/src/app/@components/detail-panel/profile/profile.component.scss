@@ -1,0 +1,16 @@
+.profile {
+  position:relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &__item {
+    display: grid;
+    padding: 5px;
+    &__title {
+      color: var(--gray-4);  
+      text-align: center;
+    }
+    &__value {
+      text-align: center;
+    }
+  }  
+}

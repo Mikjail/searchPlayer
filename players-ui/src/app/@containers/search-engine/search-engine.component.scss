@@ -1,0 +1,11 @@
+.search-engine {
+  &__search-panel {
+    display: block;
+    margin-top: 20px;
+  }
+  &__detail-panel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,17 @@
+.detail {
+  border: 1px solid var(--divider-color);
+  border-radius: var(--rounded-corner);
+  margin: auto;
+  width: 374px;
+  display: grid;
+  row-gap: 20px;
+  padding: 20px 10px;
+  &__img {
+    width: 150px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  &__title {
+    text-align: center;
+  }
+}

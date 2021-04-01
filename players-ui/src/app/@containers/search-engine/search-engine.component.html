@@ -1,4 +1,13 @@
-<h1> Player Archive</h1>
-<app-search-panel (searchQuery)="onSearchPlayer($event)">
-
+<div class="search-engine">
+  <h1> Player Archive</h1>
+<app-search-panel 
+(searchQuery)="onSearchPlayer($event)"
+class="search-engine__search-panel">
 </app-search-panel>
+<app-detail-panel 
+class="search-engine__detail-panel" 
+[playerDetails]="playerDetails"
+*ngIf="playerDetails && !loader"> 
+</app-detail-panel>
+<app-loader *ngIf="loader"></app-loader>
+</div>

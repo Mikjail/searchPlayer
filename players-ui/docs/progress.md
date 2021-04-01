@@ -11,8 +11,16 @@
 ## Components
 
 - [x] search-panel.
-- [ ] list.
-- [ ] detail-panel.
+- [x] detail-panel.
+- [x] profile
+- [x] stats
+- [x] summary
+- [x] loader
+
+## Models
+
+- [ ] PlayerData
+- [x] PlayerProfile
 
 ## Theme
 

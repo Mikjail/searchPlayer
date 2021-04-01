@@ -1,0 +1,22 @@
+<div class="stats">
+  <div class="stats__item" *ngFor="let type of statTypes">
+    <div class="stats__item__header" (click)="onSelectStat($event, type)">
+      <i class="stats__item__icon">
+      </i>  
+      <span class="stats__item__title">
+        {{type | titlecase}}
+      </span>
+    </div>
+    <table class="stats__item__table" *ngIf="type === statSelected">
+      <tr *ngFor="let key of statMap[statSelected]"
+          class="stats__item__table__row">
+        <td class="stats__item__table__row__title">
+          {{key | titleToSentence}}
+        </td>
+        <td class="stats__item__table__row__value">
+          {{stats[key]}}
+        </td>
+      </tr>  
+    </table>  
+  </div> 
+</div>

@@ -1,0 +1,21 @@
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  padding: 0;
+  &__item {
+    display: grid;
+    border: 1px solid var(--divider-color);
+    border-radius:var(--rounded-corner);
+    background-color: var(--secondary-background-color);
+    text-align: center;
+    padding: 5px;
+    &__title {
+      font-size: 14px;
+      color: var(--gray-4);
+    }
+    &__value {
+      font-weight: bold;
+    }
+  }
+}

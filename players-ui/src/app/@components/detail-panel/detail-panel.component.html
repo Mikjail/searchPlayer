@@ -1,0 +1,12 @@
+<div class="detail">
+  <img class="detail__img" [src]="playerDetails.profile.picture" alt="player-picture" *ngIf="playerDetails.profile?.picture">
+  <app-profile class="detail__profile" [playerDetails]="playerDetails">
+  </app-profile>
+  <ng-container *ngIf="playerDetails.stats">
+    <app-summary class="detail__summary" [stats]="playerDetails.stats">
+    </app-summary>
+    <h3 class="detail__title">Stats</h3>
+    <app-stats class="detail__stats" [stats]="playerDetails.stats" *ngIf="playerDetails.stats">
+    </app-stats>
+  </ng-container>
+</div>

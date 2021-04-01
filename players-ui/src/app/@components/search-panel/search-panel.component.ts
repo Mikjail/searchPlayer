@@ -24,7 +24,7 @@ export class SearchPanelComponent implements OnInit {
   /**
    * Initial form setup
    */
-  initForm() {
+  initForm(): void {
     this.form = new FormGroup({
       query: new FormControl('', []),
     });
@@ -33,7 +33,7 @@ export class SearchPanelComponent implements OnInit {
   /**
    * This will set the query coming as input
    */
-  setQuery() {
+  setQuery(): void {
     if (this.query) {
       this.form.patchValue({ query: this.query });
     }
@@ -42,7 +42,7 @@ export class SearchPanelComponent implements OnInit {
   /**
    *  This will emit the query searched
    */
-  onSearchPlayer() {
+  onSearchPlayer(): void {
     const { query } = this.form.value;
     this.searchQuery.emit(query.toLowerCase());
   }
