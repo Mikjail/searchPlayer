@@ -9,7 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class SearchPanelComponent implements OnInit {
   @Input() query: string;
 
-  @Output() searchPlayer = new EventEmitter();
+  @Output() searchQuery = new EventEmitter();
 
   form: FormGroup;
 
@@ -44,6 +44,6 @@ export class SearchPanelComponent implements OnInit {
    */
   onSearchPlayer() {
     const { query } = this.form.value;
-    this.searchPlayer.emit(query.toLowerCase());
+    this.searchQuery.emit(query.toLowerCase());
   }
 }

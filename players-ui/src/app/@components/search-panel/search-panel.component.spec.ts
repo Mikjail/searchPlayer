@@ -33,7 +33,7 @@ describe('SearchPanelComponent', () => {
 
   it('should emit the new value when user clicks on search', () => {
     const newQuery = 'rincon';
-    const searchSpy = spyOn(component.searchPlayer, 'emit');
+    const searchSpy = spyOn(component.searchQuery, 'emit');
     // set query
     component.form.patchValue({ query: newQuery });
     // click on btn
@@ -45,7 +45,7 @@ describe('SearchPanelComponent', () => {
 
   it('should send the query as lowerCase', () => {
     const newQuery = 'RincoN';
-    const searchSpy = spyOn(component.searchPlayer, 'emit');
+    const searchSpy = spyOn(component.searchQuery, 'emit');
     // set query
     component.form.patchValue({ query: newQuery });
     // click on btn
