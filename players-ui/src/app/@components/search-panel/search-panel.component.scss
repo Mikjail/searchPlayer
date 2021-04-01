@@ -1,0 +1,13 @@
+.search-panel {
+  display:grid;
+  justify-content: center;
+  &__form {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    column-gap: 10px;
+    height: 42px;
+    &__btn {
+      padding: 0 10px;
+    } 
+  }
+}

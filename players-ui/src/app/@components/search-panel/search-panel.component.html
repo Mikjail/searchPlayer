@@ -1,0 +1,16 @@
+<div class="search-panel">
+  <h2>
+    Enter player's id:
+  </h2>
+  <form class="search-panel__form" [formGroup]="form" (ngSubmit)="onSearchPlayer()">
+    <input type="text"
+    id="player-id"
+    formControlName="query"
+    class="text-input search-panel__form__search-input" 
+    placeholder="Player id...">
+    <button class="primary-btn search-panel__form__btn" type="submit">
+      Search
+    </button>
+  </form>
+</div>
+

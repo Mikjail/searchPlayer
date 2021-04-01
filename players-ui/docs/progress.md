@@ -10,7 +10,7 @@
 
 ## Components
 
-- [ ] search-panel.
+- [x] search-panel.
 - [ ] list.
 - [ ] detail-panel.
 
