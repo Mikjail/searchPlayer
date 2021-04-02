@@ -29,6 +29,11 @@ export class StatsComponent implements OnInit {
     ],
     [StatType.PASSING]: ['successfulCrosses', 'passingAccuracy', 'totalPasses'],
   };
+  faIconMap = {
+    [StatType.OFFENSIVE]: 'fa-crosshairs',
+    [StatType.DEFFENSIVE]: 'fa-shield',
+    [StatType.PASSING]: 'fa-futbol-o',
+  };
   statTypes = Object.keys(this.statMap) as StatType[];
   statSelected?: StatType;
   iterateKeys = Object.keys;

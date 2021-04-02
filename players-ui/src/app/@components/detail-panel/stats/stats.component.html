@@ -1,11 +1,15 @@
 <div class="stats">
   <div class="stats__item" *ngFor="let type of statTypes">
     <div class="stats__item__header" (click)="onSelectStat($event, type)">
-      <i class="stats__item__icon">
-      </i>  
-      <span class="stats__item__title">
+      <i class="stats__item__header__icon fa" [ngClass]="faIconMap[type]">
+      </i>
+      <span class="stats__item__header__title">
         {{type | titlecase}}
       </span>
+      <i class="stats__item__header__arrow fa"
+        [class.fa-angle-down]="type === statSelected"
+        [class.fa-angle-up]="type !== statSelected">
+      </i>
     </div>
     <table class="stats__item__table" *ngIf="type === statSelected">
       <tr *ngFor="let key of statMap[statSelected]"

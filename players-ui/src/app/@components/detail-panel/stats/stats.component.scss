@@ -11,6 +11,9 @@
     &__header {
       cursor: pointer;
       padding: 10px;
+      &__arrow {
+        float: right;
+      }
     }
     &__table {
       border-top: 1px solid var(--divider-color);

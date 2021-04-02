@@ -1,4 +1,7 @@
 <div class="detail">
+  <span class="detail__active">
+    Active
+  </span>
   <img class="detail__img" [src]="playerDetails.profile.picture" alt="player-picture" *ngIf="playerDetails.profile?.picture">
   <app-profile class="detail__profile" [playerDetails]="playerDetails">
   </app-profile>

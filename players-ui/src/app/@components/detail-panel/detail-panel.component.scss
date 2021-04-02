@@ -6,6 +6,19 @@
   display: grid;
   row-gap: 20px;
   padding: 20px 10px;
+  &__active {
+    text-align: center;
+    color: var(--accent-color);
+    padding: 7px;
+    width: 50px;
+    font-size: 14px;
+    display: grid;
+    border: 1px solid var(--divider-color);
+    border-radius: var(--rounded-corner);
+    background-color: var(--secondary-background-color);
+    text-align: center;
+    padding: 5px;
+  }
   &__img {
     width: 150px;
     border-radius: 50%;
