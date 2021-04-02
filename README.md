@@ -6,11 +6,11 @@
 
 ### Quick Start
 
-1. `npm run install`
+1. `npm install`
 
 2. `npm run start:prod`
 
-3. Open a browser and go to `localhost:5000`
+3. Open a browser and go to [localhost:5000](http://localhost:5000)
 
 OR
 
@@ -24,7 +24,7 @@ OR
 
 4. `npm run start`
 
-5. Open a browser and go to `localhost:5000`
+5. Open a browser and go to [localhost:5000](http://localhost:5000)
 
 
 ## Run Tests
