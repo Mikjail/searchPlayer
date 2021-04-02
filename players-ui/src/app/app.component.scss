@@ -1,0 +1,25 @@
+.nav {
+  margin: 0;
+  padding: 20px 20%;
+  background-color: var(--secondary-background-color);
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  &__logo {
+    max-width: 30px;
+    max-height: 30px;
+  }
+}  
+main {
+  margin: 10px;
+}
+@media only screen and(max-width: 800px) {
+  .nav {
+    padding: 20px 10px;
+    &__title {
+      span:first-child {
+        display: none;
+      }
+    }
+  }  
+} 
+
