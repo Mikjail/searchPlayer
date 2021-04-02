@@ -1,28 +1,84 @@
-# Search Player App
+# One Football - Player Archive
+
+## Getting Starter
+
+### Quick Start
+
+1. `npm run install`
+
+2. `npm run start:prod`
+
+3. Open a browser and go to `localhost:5000`
+
+OR
+
+### Step by step
+
+1. `npm install` 
+
+2. `npm run install:client`
+
+3. `npm run build:client`
+
+4. `npm run start`
+
+5. Open a browser and go to `localhost:5000`
+
+
+## Run Tests
+
+1. `npm run test:client`
+
+2. Tou can see the test coverage in the terminal or you can visit `players-ui/coverage/index.html`.
 
 ## Project Architecture
 
 ```console
+|───docs
 |───players-ui
-|  ├───app
-|  |  |───@containers
-|  |  |  |───search-engine
-|  |  |  └───not-found
-|  |  └───@components
-|  |     |───search-panel
-|  |     |───table
-|  |     └───detail-panel
-|  └───theme
-|     ├───variables
-|     └───main
-| ... // Bonus (nodejs)
+|  |  ├──app
+|  |  |──models
+|  |  |──utils
+|  |  |   └──pipes
+|  |  |──@containers
+|  |  |   └───search-engine
+|  |  └──@components
+|  |      |──detail-panel
+|  |      |   |──profile
+|  |      |   |──summary
+|  |      |   └──stats
+|  |      |───loader
+|  |      └───search-panel
+|  |──assets
+|  |──environments
+|  └──theme
+|   ├──variables
+|   └──main
+|───controllers
+|───routes
+|───utils
+└──index.js
 ```
-
 ## Stack
 
 - Angular 11.
 - Nodejs.
 
-## Commands
+## Challenge notes
 
-...
+### UI 
+
+- Framework: Angular 11 (latest version) is used since that's the framework used in oneFootball. I personally consider that the stack to choose will depend on the app to be built. For example, in this challenge, since there is no future implementations could be easily be done without frameworks (there won't be any scalability issues and would be lighter).
+
+- Styles: The variables has been created by the native css. I'm using Sass as preproccesor. The naming convention used in the styles is BEM.
+
+- UX: The stats details has been categorized by PASSING, DEFFENSIVE, OFFENSIVE.
+
+### BE
+
+- For future implementations I would modify the data structure coming from the sandbox given in the challenge to easily adapt the response to the UI. For example, I would refactor the profile/data json to be categorized by `passing`, `deffensive` and `offensive` objects.
+
+## DOCS
+
+- [UI Project Progress](players-ui/docs/progress.md).
+- [BE Project Progress](./docs/progress.md).

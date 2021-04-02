@@ -1,4 +1,17 @@
 # Search App - Progress
 
-- [ ] [UI](./players-ui/docs/progress.md)
-- [ ] Nodejs hosting
+## Project Setup
+- [x] README
+- [x] index.js
+- [x] express
+- [x] body-parser
+
+## Controllers
+- [x] playerController.
+
+## Routes
+- [x] playerRoutes
+
+## Utils
+- [x] axios
+- [x] error-handler

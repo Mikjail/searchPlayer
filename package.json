@@ -1,0 +1,32 @@
+{
+  "name": "player-archive",
+  "version": "1.0.0",
+  "description": "player archive",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "install:client": "npm install --prefix players-ui",
+    "build:client": "npm run build --prefix players-ui",
+    "start:prod": "npm run install:client && npm run build:client && npm run start",
+    "start": "node index.js",
+    "test:client": "npm run test --prefix players-ui",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix players-ui && npm run build --prefix players-ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikjail/searchPlayer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikjail/searchPlayer/issues"
+  },
+  "homepage": "https://github.com/Mikjail/searchPlayer#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
