@@ -1,5 +1,7 @@
 # One Football - Player Archive
 
+ DEMO :  [https://player-archive.herokuapp.com/](https://player-archive.herokuapp.com/)
+
 ## Getting Starter
 
 ### Quick Start
@@ -29,7 +31,7 @@ OR
 
 1. `npm run test:client`
 
-2. Tou can see the test coverage in the terminal or you can visit `players-ui/coverage/index.html`.
+2. You can see the test coverage in the terminal or you can visit `players-ui/coverage/index.html`.
 
 ## Project Architecture
 
@@ -70,7 +72,7 @@ OR
 
 - Framework: Angular 11 (latest version) is used since that's the framework used in oneFootball.
 
-- Styles: The variables has been created by the native css. I'm using Sass as preproccesor. The naming convention used in the styles is BEM.
+- Styles: The variables has been created by the native css. The project is Sass as preproccesor. The naming convention used in the classes is BEM.
 
 - UX: The stats details has been categorized by PASSING, DEFFENSIVE, OFFENSIVE.
 
