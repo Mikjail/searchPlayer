@@ -68,7 +68,7 @@ OR
 
 ### UI 
 
-- Framework: Angular 11 (latest version) is used since that's the framework used in oneFootball. I personally consider that the stack to choose will depend on the app to be built. For example, in this challenge, since there is no future implementations could be easily be done without frameworks (there won't be any scalability issues and would be lighter).
+- Framework: Angular 11 (latest version) is used since that's the framework used in oneFootball.
 
 - Styles: The variables has been created by the native css. I'm using Sass as preproccesor. The naming convention used in the styles is BEM.
 
