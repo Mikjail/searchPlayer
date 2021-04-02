@@ -3,17 +3,24 @@
 ## Project Architecture
 
 ```console
-├───app
-|  |───@containers
-|  |  |───search-engine
-|  |  └───not-found
+├──app
+|  |──models
+|  |──utils
+|  |   └──pipes
+|  |──@containers
+|  |   └───search-engine
 |  └──@components
-|     |───search-panel
-|     |───table
-|     └───detail-panel
-└───theme
-    ├───variables
-    └───main
+|      |──detail-panel
+|      |   |──profile
+|      |   |──summary
+|      |   └──stats
+|      |───loader
+|      └───search-panel
+|──assets
+|──environments
+└──theme
+    ├──variables
+    └──main
 ```
 
 ## DOCS

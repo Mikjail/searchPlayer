@@ -1,0 +1,5 @@
+export default {
+  id: 'fabio',
+  active: 'true',
+  'profile-id': 'profile-111.json',
+};

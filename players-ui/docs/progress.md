@@ -6,7 +6,7 @@
 
 ## Containers
 
-- [ ] search-engine.
+- [x] search-engine.
 
 ## Components
 
@@ -19,7 +19,7 @@
 
 ## Models
 
-- [ ] PlayerData
+- [x] PlayerData
 - [x] PlayerProfile
 
 ## Theme

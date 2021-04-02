@@ -1,13 +1,21 @@
 <div class="search-engine">
   <h1> Player Archive</h1>
-<app-search-panel 
-(searchQuery)="onSearchPlayer($event)"
-class="search-engine__search-panel">
-</app-search-panel>
-<app-detail-panel 
-class="search-engine__detail-panel" 
-[playerDetails]="playerDetails"
-*ngIf="playerDetails && !loader"> 
-</app-detail-panel>
-<app-loader *ngIf="loader"></app-loader>
+  
+  <app-search-panel 
+  (searchQuery)="onSearchPlayer($event)"
+  class="search-engine__search-panel">
+  </app-search-panel>
+  
+  <app-detail-panel 
+  *ngIf="playerDetails && !loader else noData"
+  class="search-engine__detail-panel" 
+  [playerDetails]="playerDetails"> 
+  </app-detail-panel>
+
+  <app-loader class="search-engine__loader" *ngIf="loader"></app-loader>
 </div>
+
+<ng-template #noData>
+    <h2 class="search-engine__no-content" *ngIf="noContent && !loader">Player is not available</h2>
+    <h2 class="search-engine__no-content" *ngIf="initialState && !loader"> Start your search! </h2>
+</ng-template>

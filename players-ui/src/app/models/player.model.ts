@@ -1,5 +1,5 @@
 export interface PlayerBasicDetails {
-  active: boolean;
+  active: string | boolean;
   id: string;
   'profile-id': string;
 }

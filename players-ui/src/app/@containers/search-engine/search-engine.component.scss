@@ -8,4 +8,10 @@
     justify-content: center;
     margin-top: 20px;
   }
+  &__no-content,
+  &__loader {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+  }
 }
