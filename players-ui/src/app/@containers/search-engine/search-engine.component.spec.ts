@@ -23,7 +23,8 @@ describe('SearchEngineComponent', () => {
   let component: SearchEngineComponent;
   let fixture: ComponentFixture<SearchEngineComponent>;
   let searchService: SearchEngineService;
-
+  const PLAYER_NOT_AVAILABLE = 'Player is not available';
+  const INITIAL_SEARCH = 'Start your search!';
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HttpClientModule],
@@ -120,7 +121,7 @@ describe('SearchEngineComponent', () => {
     const element = fixture.debugElement.nativeElement.querySelector(
       '.search-engine__no-content',
     );
-    expect(element.innerText).toEqual('Player is not available');
+    expect(element.innerText).toEqual(PLAYER_NOT_AVAILABLE);
   }));
 
   it('should show `player is not available` if player doesnt exist', fakeAsync(() => {
@@ -137,7 +138,7 @@ describe('SearchEngineComponent', () => {
     const element = fixture.debugElement.nativeElement.querySelector(
       '.search-engine__no-content',
     );
-    expect(element.innerText).toEqual('Player is not available');
+    expect(element.innerText).toEqual(PLAYER_NOT_AVAILABLE);
   }));
 
   it('should show initial message state if search is empty', fakeAsync(() => {
@@ -149,6 +150,43 @@ describe('SearchEngineComponent', () => {
     const element = fixture.debugElement.nativeElement.querySelector(
       '.search-engine__no-content',
     );
-    expect(element.innerText).toEqual('Start your search!');
+    expect(element.innerText).toEqual(INITIAL_SEARCH);
+  }));
+
+  it('should show `player is not available` if profile info doesnt exist', fakeAsync(() => {
+    mockBasicPlayerDetails.active = 'true';
+    spyOn(searchService, 'getAvailablePlayer').and.returnValue(
+      of(mockBasicPlayerDetails).pipe(delay(1)),
+    );
+    spyOn(searchService, 'getPlayerProfile').and.returnValue(
+      throwError({ status: 404 }),
+    );
+    // Initial component state
+    expect(component.initialState).toBeTruthy();
+    expect(component.noContent).toBeFalsy();
+    expect(component.loader).toBeFalsy();
+    expect(component.playerDetails).toBeUndefined();
+    // Search is emitted
+    component.onSearchPlayer('fabio');
+    expect(component.loader).toBeTruthy();
+    // simulate the 1sec delay to reponse
+    tick(1);
+    // service should have been called
+    expect(searchService.getAvailablePlayer).toHaveBeenCalled();
+    // simulate the 1sec delay to reponse
+    tick(1);
+    // service should have been called
+    expect(searchService.getPlayerProfile).toHaveBeenCalled();
+    // state of load, and noContent and playerDetails changed
+    expect(component.initialState).toBeFalsy();
+    expect(component.loader).toBeFalsy();
+    expect(component.noContent).toBeTruthy();
+    // Trigger changes in template
+    fixture.detectChanges();
+    // Get no-content element
+    const element = fixture.debugElement.nativeElement.querySelector(
+      '.search-engine__no-content',
+    );
+    expect(element.innerText).toEqual(PLAYER_NOT_AVAILABLE);
   }));
 });
